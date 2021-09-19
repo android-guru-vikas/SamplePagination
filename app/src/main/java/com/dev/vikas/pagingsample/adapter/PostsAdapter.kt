@@ -3,7 +3,6 @@ package com.dev.vikas.pagingsample.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.paging.PagedListAdapter
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.vikas.pagingsample.R
@@ -12,8 +11,8 @@ import com.dev.vikas.pagingsample.utils.DiffUtilCallBack
 import kotlinx.android.synthetic.main.adapter_row.view.*
 
 
-class RedditPostsAdapter :
-    PagingDataAdapter<Data, RedditPostsAdapter.MyViewHolder>(DiffUtilCallBack()) {
+class PostsAdapter :
+    PagingDataAdapter<Data, PostsAdapter.MyViewHolder>(DiffUtilCallBack()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_row, parent, false)
